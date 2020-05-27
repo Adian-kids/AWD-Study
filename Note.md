@@ -1,5 +1,9 @@
 # Reference
 > Vedio Link:https://www.bilibili.com/video/BV1Tz4y197fF
+# 注意事项
+1.注意Check避免持续扣分
+2.注意流量监控，文件监控日志
+3.注意不要宕机，疯狂扣分
 # Defense
 ## 弱口令加固
 修改密码
@@ -24,7 +28,7 @@ netstat -nul(UDP)
 ``` 
 >  Local Address 0.0.0.0则可以任何人连接 0.127.0.0则仅限本地连接，比如3306端口（mysql）  
 ### Web后门查找
-1.根目录下文件名不正常的文件 aaa.php abc.php bkd.php等等   
+1.根目录下文件名不正常的文件 `aaa.php` `abc.php ` `bkd.php`等等   
 查看隐藏文件
 ```
 ls -l
@@ -33,8 +37,15 @@ ls -l
 ```
 grep "eval" -R ./*
 ```
-3.将代码下载下来查杀
-
+3.将代码下载下来查杀,打包到Web根目录下
+```
+zip  -r fileName.zip  文件夹路径（/home/www）
+tar czvf filename.tar 文件夹路径（/home/www）
+```
+查找网站根目录位置
+```
+find / -name index.php
+```
 
 # Attack
 ## 弱口令攻击
