@@ -4,7 +4,7 @@
 准备流量监控脚本
 准备批量POC
 # Reference
-> Vedio Link:https://www.bilibili.com/video/BV1Tz4y197fF
+> Vedio Link:https://www.bilibili.com/video/BV1Tz4y197fF   
 > https://zhuanlan.zhihu.com/p/48987615
 # 注意事项
 1.注意Check避免持续扣分
