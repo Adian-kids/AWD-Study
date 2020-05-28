@@ -1,3 +1,8 @@
+# 待办
+准备不死马
+准备文件监控脚本
+准备流量监控脚本
+准备批量POC
 # Reference
 > Vedio Link:https://www.bilibili.com/video/BV1Tz4y197fF
 # 注意事项
@@ -46,7 +51,8 @@ tar czvf filename.tar 文件夹路径（/home/www）
 ```
 find / -name index.php
 ```
-
+### 不死马防护
+注释掉内容，重新给变量赋值
 # Attack
 ## 弱口令攻击
 对手未更改默认密码或者存在其他账户，可以使用Msfconsole中的ssh_login模块去进行弱口令攻击
@@ -65,3 +71,9 @@ sessions -i Id
 ```
 cat /flag*
 ```
+## 官方后门批量
+可能会有官方存下来的Webshell，短文件名等都要注意，即使查杀使用脚本批量
+## Web基础防护
+1.修改默认账户密码
+2.代码审计查找其他漏洞,注意检查日志，可能会有写入的一句话
+
