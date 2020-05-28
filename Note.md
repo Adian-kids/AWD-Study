@@ -13,7 +13,8 @@
 # Defense
 ## 备份网站源码以及数据库
 ```
-mysqldump -u root -h host -p dbname > backdb.sql
+mysqldump -u root -p --all-databases > backdb.sql //备份
+mysql -u root -p [dbname] < backup.sql //恢复
 ```
 ## 弱口令加固
 修改密码
