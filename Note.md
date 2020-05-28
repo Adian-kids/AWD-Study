@@ -4,12 +4,18 @@
 准备流量监控脚本
 准备批量POC
 # Reference
-> Vedio Link:https://www.bilibili.com/video/BV1Tz4y197fF
+> Vedio Link:https://www.bilibili.com/video/BV1Tz4y197fF      
+> https://zhuanlan.zhihu.com/p/48987615
 # 注意事项
 1.注意Check避免持续扣分
 2.注意流量监控，文件监控日志
 3.注意不要宕机，疯狂扣分
 # Defense
+## 备份网站源码以及数据库
+```
+mysqldump -u root -p --all-databases > backdb.sql //备份
+mysql -u root -p [dbname] < backup.sql //恢复
+```
 ## 弱口令加固
 修改密码
 ```
@@ -43,6 +49,7 @@ ls -l
 grep "eval" -R ./*
 ```
 3.将代码下载下来查杀,打包到Web根目录下
+使用Winscp Cooy到本地
 ```
 zip  -r fileName.zip  文件夹路径（/home/www）
 tar czvf filename.tar 文件夹路径（/home/www）
@@ -54,8 +61,14 @@ find / -name index.php
 ### 不死马防护
 注释掉内容，重新给变量赋值
 ## Web基础防护
-1.修改默认账户密码
+1.修改默认账户密码（更改数据库，md5）
 2.代码审计查找其他漏洞,注意检查日志，可能会有写入的一句话
+## 关闭Mysql外部连接
+```
+use mysql;
+update user set host = “localhost” where user = “root” and host= “%”;
+flush privileges;
+```
 # Attack
 ## 弱口令攻击
 对手未更改默认密码或者存在其他账户，可以使用Msfconsole中的ssh_login模块去进行弱口令攻击
