@@ -35,7 +35,7 @@ ssh root@ip
 ## Tomcat管理台默认口令漏洞 ##
 **Port:** 8180    
 **Service:** ApacheTomcat/CoyoteJSP engine1.1   
-**Default:**tomcat tomcat
+**Default:** tomcat tomcat
 ## sysmlink 默认配置目录遍历漏洞 ##
 **Port:** 445 139   
 **Service:** Samba   
