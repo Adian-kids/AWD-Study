@@ -61,8 +61,8 @@ service apache2 start
 - 第十步：文档和报告
 
 # W3af_consle #
-|方式|作用|
 ## 基本操作 ##
+|方式|作用|
 |-|-|
 |view |查看参数|
 |set| 改变参数值|
